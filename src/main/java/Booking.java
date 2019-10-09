@@ -18,7 +18,12 @@ public class Booking {
         this.rooms.add(roomParameter);
     }
 
+    public void addNightsBooked(int nightsBookedParameter) {
+        this.nightsBooked = nightsBookedParameter;
+    }
+
     public int getNightsBooked() {
         return this.nightsBooked;
     }
+
 }

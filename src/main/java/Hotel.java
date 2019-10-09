@@ -9,6 +9,7 @@ public class Hotel {
     private ArrayList<Guest> guests;
     private ArrayList<Booking> bookings;
 
+
     public Hotel(int capacity) {
         this.capacity = capacity;
         this.bedrooms = new ArrayList<Bedroom>();
@@ -34,6 +35,11 @@ public class Hotel {
 
     public void addBooking(Booking bookingParameter) {
         this.bookings.add(bookingParameter);
+    }
+
+    public void realAddBooking(Bedroom room, int nightsBooked, Booking booking) {
+        booking.addRoom(room);
+        booking.addNightsBooked(nightsBooked);
     }
 
 

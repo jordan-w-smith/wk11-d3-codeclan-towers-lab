@@ -11,6 +11,7 @@ public class HotelTest {
     private Bedroom room1;
     private Bedroom room2;
     private Booking booking1;
+    private Booking booking2;
 
 
     @Before
@@ -22,6 +23,7 @@ public class HotelTest {
         room1 = new Bedroom(1, 1, "Single");
         room2 = new Bedroom(2, 2, "Double");
         booking1 = new Booking(5);
+        booking2 = new Booking();
     }
 
     @Test
@@ -38,6 +40,11 @@ public class HotelTest {
     public void canTakeBooking() {
         hotel1.addBooking(booking1);
         assertEquals(1, hotel1.countBookings());
+    }
+
+    @Test
+    public void canReallyTakeBooking() {
+        hotel1.realAddBooking(room1, 10, booking2);
     }
 
 
