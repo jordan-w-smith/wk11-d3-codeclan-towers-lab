@@ -28,4 +28,14 @@ public class Bedroom {
     public int guestCount() {
         return this.guests.size();
     }
+
+    public void addGuest(Guest guestParameter) {
+        if (guestCount() < this.capacity) {
+            this.guests.add(guestParameter);
+        }
+    }
+
+    public void removeGuest(Guest guestParameter) {
+        this.guests.remove(guestParameter);
+    }
 }

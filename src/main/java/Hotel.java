@@ -30,9 +30,9 @@ public class Hotel {
         return this.guests.size();
     }
 
-    public void addGuest(Guest guest1) {
-        if (bedroomsHaveAvailability()) {
-            this.guests.add(guest1);
-        }
-    }
+//    public void addGuest(Guest guest1) {
+//        if (bedroomsHaveAvailability()) {
+//            this.guests.add(guest1);
+//        }
+//    }
 }
