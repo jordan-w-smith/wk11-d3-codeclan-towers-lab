@@ -38,4 +38,6 @@ public class Bedroom {
     public void removeGuest(Guest guestParameter) {
         this.guests.remove(guestParameter);
     }
+
+
 }

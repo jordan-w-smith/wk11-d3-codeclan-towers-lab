@@ -7,6 +7,7 @@ public class Hotel {
     private ArrayList<ConferenceRoom> conferenceRooms;
     private HashMap<Integer, String> bedroomTypes;
     private ArrayList<Guest> guests;
+    private ArrayList<Booking> bookings;
 
     public Hotel(int capacity) {
         this.capacity = capacity;
@@ -14,6 +15,7 @@ public class Hotel {
         this.conferenceRooms = new ArrayList<ConferenceRoom>();
         this.bedroomTypes = new HashMap<Integer, String>();
         this.guests = new ArrayList<Guest>();
+        this.bookings = new ArrayList<Booking>();
     }
 
 
@@ -26,13 +28,14 @@ public class Hotel {
         return capacity > bedrooms.size();
     }
 
-    public int guestCount() {
-        return this.guests.size();
+    public int countBookings() {
+        return this.bookings.size();
     }
 
-//    public void addGuest(Guest guest1) {
-//        if (bedroomsHaveAvailability()) {
-//            this.guests.add(guest1);
-//        }
-//    }
+    public void addBooking(Booking bookingParameter) {
+        this.bookings.add(bookingParameter);
+    }
+
+
+
 }
